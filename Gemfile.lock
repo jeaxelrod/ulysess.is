@@ -18,6 +18,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.16)
+    bcrypt-ruby (3.1.2-x86-mingw32)
     builder (3.1.4)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -99,6 +100,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (>= 3.1)
+  bcrypt-ruby
   erubis (~> 2.7.0)
   padrino (= 0.12.0)
   rack-test

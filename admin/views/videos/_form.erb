@@ -1,0 +1,41 @@
+<% error = @video.errors.include?(:title) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :title, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :title, :class => 'form-control input-xlarge input-with-feedback', :autofocus => true %>
+    <span class='help-inline'><%= error ? f.error_message_on(:title) : "Ex: Naval Ravikant" %></span>
+  </div>
+</fieldset>
+<% error = @video.errors.include?(:description) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :description, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :description, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:description) : "Ex: Founder of AngelList" %></span>
+  </div>
+</fieldset>
+<% error = @video.errors.include?(:link) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :link, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :link, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:link) : "Ex: http://vimeo.com/16034713" %></span>
+  </div>
+</fieldset>
+<% error = @video.errors.include?(:category) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :category, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :category, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:category) : "Ex: Entrepreneur" %></span>
+  </div>
+</fieldset>
+
+
+<div class="form-actions">
+  <%= f.submit pat(:save), :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue' %>
+  &nbsp;
+  <%= link_to pat(:cancel), url(:videos, :index), :class => 'btn btn-default' %>
+</div>
