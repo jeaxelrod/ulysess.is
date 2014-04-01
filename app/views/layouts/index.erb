@@ -1,8 +1,32 @@
-<!DOCTYPE html>
-<head>
-  <title>Ulysess | <%= @title %></title>
-</head>
-<body>
-  <h1>Hi</h1>
-</body>
-	
+<header>
+	<nav>
+		<div class="logo">
+			<h3 class="text-center">Ulysess</h3>
+			<p class="text-center">Brave | Bold | Daring</p>
+		</div>
+		<span> <%= @video.category.pluralize %></span>
+		<a href="#">Facebook</a>
+		<a href="#">Twitter</a>
+	</nav>
+</header>
+<div class="video">
+	<a class="text-center icon" href=<%= @video.link %>><%= image_tag 'icon_19281.png' %></a>
+	<ul class="menu">	
+	  <li>
+		  <a href="#"><h1 class="text-center"><%= @video.title %></h1></a>
+			<ul>
+				<% @videos.each do |video| %>
+					<% unless @video == video %>
+						 <li><a class="text-center" href=<%= video.link %>><h1><%= video.title %></h1></a></li>
+					<% end %>
+				<% end %>
+			</ul>
+		</li>
+	</ul>
+	<h3 class="text-center"><%= @video.description %></h3>
+</div>
+<script>
+  $(document).ready(function() {
+	  $('.menu').dropit();
+	});
+</script>

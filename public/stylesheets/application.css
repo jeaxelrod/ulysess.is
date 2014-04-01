@@ -1,0 +1,52 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: #e6e0d9; }
+  body a {
+    color: #336699; }
+  body h1 {
+    font-size: 4em; }
+  body h2 {
+    font-weight: bold;
+    font-size: 3em; }
+  body h3 {
+    font-size: 2em;
+    margin-top: 0.5em; }
+  body .text-center {
+    text-align: center; }
+  body nav {
+    margin: 50px 100px; }
+    body nav .logo {
+      width: 200px;
+      display: inline-block; }
+      body nav .logo p {
+        display: inline-block;
+        width: 100%;
+        padding-top: 10px; }
+    body nav span {
+      position: relative;
+      right: 35px;
+      color: gray; }
+    body nav a {
+      float: right;
+      padding: 10px; }
+  body .video #nav {
+    list-style: none; }
+  body .video a.icon {
+    margin: 50px auto;
+    display: block;
+    padding: 40px 0; }
+  body .video .dropit {
+    list-style: none; }
+    body .video .dropit .dropit-trigger {
+      position: relative; }
+    body .video .dropit .dropit-submenu {
+      position: absolute;
+      width: 400px;
+      top: 100%;
+      left: 50%;
+      margin-left: -200px;
+      z-index: 1000;
+      min-width: 150px;
+      background-color: white;
+      border: 1px solid #b2b2b2; }
