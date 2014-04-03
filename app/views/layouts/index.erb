@@ -1,7 +1,7 @@
 <header>
 	<nav>
 		<div class="logo">
-			<h3 class="text-center">Ulysess</h3>
+			<h3 class="text-center">Ulysses</h3>
 			<p class="text-center">Brave | Bold | Daring</p>
 		</div>
 		<span> <%= @video.category.pluralize %></span>
@@ -9,15 +9,15 @@
 		<a href="#">Twitter</a>
 	</nav>
 </header>
-<div class="video">
-	<a class="text-center icon" href=<%= @video.link %>><%= image_tag 'icon_19281.png' %></a>
+<div class="content">
+	<a class="text-center icon" href='#'><%= image_tag 'icon_19281.png' %></a>
 	<ul class="menu">	
 	  <li>
 		  <a href="#"><h1 class="text-center"><%= @video.title %></h1></a>
 			<ul>
 				<% @videos.each do |video| %>
 					<% unless @video == video %>
-						 <li><a class="text-center" href=<%= video.link %>><h1><%= video.title %></h1></a></li>
+						 <li><a class="text-center" href="/<%= video.id %>"><h1><%= video.title %></h1></a></li>
 					<% end %>
 				<% end %>
 			</ul>
@@ -25,8 +25,21 @@
 	</ul>
 	<h3 class="text-center"><%= @video.description %></h3>
 </div>
+<div class="video">
+    <iframe src="//player.vimeo.com/video/<%= @vimeo_video_id %>?autoplay=1" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 <script>
   $(document).ready(function() {
 	  $('.menu').dropit();
+		$('.icon').click(function() {
+		  $('.video').toggle();
+			return false;	
+		});
+		$('.video').click(function() {
+		  $('.video').toggle();
+			return false;	
+		});
 	});
+	$
 </script>

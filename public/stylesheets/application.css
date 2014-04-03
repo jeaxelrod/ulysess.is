@@ -30,23 +30,47 @@ body {
     body nav a {
       float: right;
       padding: 10px; }
-  body .video #nav {
+  body .content #nav {
     list-style: none; }
-  body .video a.icon {
+  body .content h1 {
+    width: fit-content; }
+  body .content a.icon {
     margin: 50px auto;
     display: block;
-    padding: 40px 0; }
-  body .video .dropit {
+    padding: 40px 0;
+    width: 500px; }
+  body .content .dropit {
     list-style: none; }
-    body .video .dropit .dropit-trigger {
-      position: relative; }
-    body .video .dropit .dropit-submenu {
+    body .content .dropit a {
+      display: inline-block;
+      margin: 0 auto;
+      width: auto; }
+    body .content .dropit .dropit-trigger {
+      position: relative;
+      text-align: center; }
+    body .content .dropit .dropit-submenu {
       position: absolute;
-      width: 400px;
+      width: auto;
       top: 100%;
       left: 50%;
       margin-left: -200px;
       z-index: 1000;
       min-width: 150px;
-      background-color: white;
+      background-color: #e6e0d9;
       border: 1px solid #b2b2b2; }
+  body .video {
+    display: none;
+    position: absolute;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0px;
+    left: 0px; }
+    body .video iframe {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -225px;
+      margin-left: -400px;
+      z-index: 3000; }

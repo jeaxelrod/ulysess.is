@@ -30,26 +30,50 @@ body
     a
       float: right
       padding: 10px
-  .video
+  .content
     #nav
       list-style: none
+    h1
+      width: fit-content
     a.icon
       margin: 50px auto
       display: block
       padding: 40px 0 
+      width: 500px
     .dropit 
       list-style: none
+      a
+        display: inline-block
+        margin: 0 auto
+        width: auto
       .dropit-trigger
         position: relative
+        text-align: center
       .dropit-submenu
         position: absolute
-        width: 400px
+        width: auto
         top: 100%
         left: 50%
         margin-left: -200px
         z-index: 1000
         min-width: 150px
-        background-color: #FFF
+        background-color: #E6E0D9
         border: 1px solid #B2B2B2
+  .video
+    display: none
+    position: absolute
+    z-index: 2000
+    width: 100%
+    height: 100%
+    background-color: black
+    top: 0px
+    left: 0px
+    iframe
+      position: absolute
+      left: 50%
+      top: 50%
+      margin-top: -225px
+      margin-left: -400px
+      z-index: 3000
 
     

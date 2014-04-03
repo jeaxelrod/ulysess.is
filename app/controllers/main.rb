@@ -3,10 +3,21 @@ Ulysess::App.controllers  do
     @videos = Video.all
     @video = Video.first
     @title = @video.title
+    @vimeo_video_id = @video.link[/\d+/]
     render "layouts/index.erb"
   end
   
-  get "/:video_id" do
-    @video = Video.find(params[:video_id])
+  get "/play" do
+    render "layouts/play.erb"
   end
+  
+  get "/:id" do
+    @video = Video.find(params[:id])
+    @videos = Video.all
+    @title = @video.title
+    @vimeo_video_id = @video.link[/\d+/]
+    render "layouts/index.erb"
+  end
+  
+
 end
