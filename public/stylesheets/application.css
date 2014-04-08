@@ -35,10 +35,9 @@ body {
   body .content h1 {
     width: fit-content; }
   body .content a.icon {
-    margin: 50px auto;
+    margin: 90px auto;
     display: block;
-    padding: 40px 0;
-    width: 500px; }
+    width: 200px; }
   body .content .dropit {
     list-style: none; }
     body .content .dropit a {
@@ -56,15 +55,19 @@ body {
       margin-left: -200px;
       z-index: 1000;
       min-width: 150px;
-      background-color: #e6e0d9;
+      background-color: #f0ede8;
       border: 1px solid #b2b2b2; }
+      body .content .dropit .dropit-submenu li:hover {
+        background-color: #bad2d2; }
+      body .content .dropit .dropit-submenu a {
+        width: 100%; }
   body .video {
     display: none;
     position: absolute;
     z-index: 2000;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.97);
     top: 0px;
     left: 0px; }
     body .video iframe {

@@ -26,18 +26,22 @@
 	<h3 class="text-center"><%= @video.description %></h3>
 </div>
 <div class="video">
-    <iframe src="//player.vimeo.com/video/<%= @vimeo_video_id %>?autoplay=1" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe id="vimeo-player" src="//player.vimeo.com/video/<%= @vimeo_video_id %>?" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 <script>
+  var iframe = $('#vimeo-player')[0];
+	var player = $f(iframe);
   $(document).ready(function() {
 	  $('.menu').dropit();
 		$('.icon').click(function() {
 		  $('.video').toggle();
+			player.api('play');
 			return false;	
 		});
 		$('.video').click(function() {
 		  $('.video').toggle();
+			player.api('pause');
 			return false;	
 		});
 	});
