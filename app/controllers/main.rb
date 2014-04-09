@@ -4,6 +4,8 @@ Ulysess::App.controllers  do
     @video = Video.first
     @title = @video.title
     @vimeo_video_id = @video.link[/\d+/]
+    @comments = @video.comments
+    @comment = Comment.new
     render "layouts/index.erb"
   end
   
@@ -16,6 +18,8 @@ Ulysess::App.controllers  do
     @videos = Video.all
     @title = @video.title
     @vimeo_video_id = @video.link[/\d+/]
+    @comments = @video.comments
+    @comment = Comment.new
     render "layouts/index.erb"
   end
   

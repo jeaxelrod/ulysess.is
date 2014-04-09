@@ -1,34 +1,61 @@
-<header>
-	<nav>
-		<div class="logo">
-			<h3 class="text-center">Ulysses</h3>
-			<p class="text-center">Brave | Bold | Daring</p>
-		</div>
-		<span> <%= @video.category.pluralize %></span>
-		<a href="#">Facebook</a>
-		<a href="#">Twitter</a>
-	</nav>
-</header>
-<div class="content">
-	<a class="text-center icon" href='#'><%= image_tag 'icon_19281.png' %></a>
-	<ul class="menu">	
-	  <li>
-		  <a href="#"><h1 class="text-center"><%= @video.title %></h1></a>
-			<ul>
-				<% @videos.each do |video| %>
-					<% unless @video == video %>
-						 <li><a class="text-center" href="/<%= video.id %>"><h1><%= video.title %></h1></a></li>
-					<% end %>
-				<% end %>
-			</ul>
-		</li>
-	</ul>
-	<h3 class="text-center"><%= @video.description %></h3>
-</div>
-<div class="video">
-    <iframe id="vimeo-player" src="//player.vimeo.com/video/<%= @vimeo_video_id %>?" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+<div class="container">
+	<header>
+		<nav>
+			<div class="logo">
+				<h3 class="text-center">Ulysses</h3>
+				<p class="text-center">Brave | Bold | Daring</p>
+			</div>
+			<span> <%= @video.category.pluralize %></span>
+			<a href="#">Facebook</a>
+			<a href="#">Twitter</a>
+		</nav>
+	</header>
 
+	<div class="content">
+		<a class="text-center icon" href='#'><%= image_tag 'icon_19281.png' %></a>
+		<ul class="menu">	
+			<li>
+				<a href="#"><h1 class="text-center"><%= @video.title %></h1></a>
+				<ul>
+					<% @videos.each do |video| %>
+						<% unless @video == video %>
+							 <li><a class="text-center" href="/<%= video.id %>"><h1><%= video.title %></h1></a></li>
+						<% end %>
+					<% end %>
+				</ul>
+			</li>
+		</ul>
+		<h3 class="text-center"><%= @video.description %></h3>
+		<div class="comments">
+			<h3>Comments</h3>
+			<% form_for @comment, url(:comments, :create) do |f| %>
+				<%= f.error_messages %>
+				
+				<p>
+					<%= f.label :name %>
+					<%= f.text_field :name %>
+				</p>
+				
+				<p>
+					<%= f.text_area :body %>
+				</p>
+				
+				<%= f.hidden_field :video_id, value: @video.id %>
+				
+				<p>
+					<%= f.submit "Create Post", class: "button" %>
+				</p>
+			<% end %>
+			<% @comments.each do |comment| %>
+				<div class="name"><%= comment.name %></div>
+				<div class="body"><%= comment.body %></div>
+			<% end %>
+		</div>
+	</div>
+	<div class="video">
+			<iframe id="vimeo-player" src="//player.vimeo.com/video/<%= @vimeo_video_id %>?" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+</div>
 <script>
   var iframe = $('#vimeo-player')[0];
 	var player = $f(iframe);
