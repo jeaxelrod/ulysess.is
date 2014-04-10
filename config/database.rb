@@ -18,15 +18,15 @@ ActiveRecord::Base.configurations[:development] = {
   :database => Padrino.root('db', 'ulysess_development.db')
 
 }
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
-  :database => 'd10aprbvftjpmo',
-  :username => 'fqfovmsrnaewpc',
-  :password => 'y-Dh_ztOUGmXs_hJki_5I-BAUP',
-  :host     => 'ec2-54-243-49-82.compute-1.amazonaws.com',
-  :port     => 5432
-
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1], 
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host
 }
 
 ActiveRecord::Base.configurations[:test] = {
