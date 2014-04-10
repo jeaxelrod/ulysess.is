@@ -20,8 +20,12 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ulysess_production.db')
+  :adapter  => 'postgresql',
+  :database => 'd10aprbvftjpmo',
+  :username => 'fqfovmsrnaewpc',
+  :password => 'y-Dh_ztOUGmXs_hJki_5I-BAUP',
+  :host     => 'ec2-54-243-49-82.compute-1.amazonaws.com',
+  :port     => 5432
 
 }
 
