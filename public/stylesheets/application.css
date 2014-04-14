@@ -4,7 +4,14 @@ html, body {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #e6e0d9; }
+  background-color: #f2f2f2;
+  /* .container
+   * background: url('/images/backround-img.jpg')
+   * background-size: auto auto
+   * background-repeat: no-repeat
+   * background-position: right top
+   * background-color: #000
+   * color: #808080 */ }
   body a {
     color: #336699; }
   body h1 {
@@ -18,54 +25,59 @@ body {
   body .text-center {
     text-align: center; }
   body nav {
-    margin: 50px 200px; }
+    margin: 0 200px; }
     body nav .logo {
-      width: 200px;
+      width: 250px;
       display: inline-block; }
       body nav .logo p {
         display: inline-block;
         width: 100%;
         padding-top: 10px; }
     body nav span {
-      position: relative;
-      right: 35px;
       color: gray; }
     body nav a {
       float: right;
       padding: 10px; }
   body .content #nav {
     list-style: none; }
-  body .content h1 {
-    width: fit-content; }
   body .content a.icon {
     margin: 90px auto;
     display: block;
-    width: 200px; }
+    width: 200px;
+    height: 200px;
+    background: url("/images/play_rings.png"); }
+  body .content a.icon:hover {
+    background: url("/images/play_rings_highlighted.png"); }
   body .content .dropit {
     list-style: none; }
     body .content .dropit a {
       display: inline-block;
       margin: 0 auto;
       width: auto; }
+    body .content .dropit a:hover {
+      color: #264d73; }
     body .content .dropit .dropit-trigger {
       position: relative;
       text-align: center; }
     body .content .dropit .dropit-submenu {
       position: absolute;
-      width: auto;
-      top: 100%;
-      left: 50%;
-      margin-left: -200px;
+      width: 500px;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 1000;
       min-width: 150px;
-      background-color: #f0ede8;
+      background-color: white;
       border: 1px solid #b2b2b2; }
       body .content .dropit .dropit-submenu li:hover {
         background-color: #bad2d2; }
       body .content .dropit .dropit-submenu a {
         width: 100%; }
   body .content .comments {
-    margin: 20px 200px; }
+    margin: 50px 200px; }
     body .content .comments form input {
       width: 30%;
       margin: 10px 0; }
@@ -73,13 +85,14 @@ body {
       width: 100%;
       resize: vertical; }
     body .content .comments form #comment_name {
-      margin-top: 20px; }
+      margin-top: 40px; }
     body .content .comments .name {
       font-weight: bold;
-      margin: 5px 0; }
+      margin-top: 20px;
+      margin-bottom: 5px; }
   body .video {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 2000;
     width: 100%;
     height: 100%;
