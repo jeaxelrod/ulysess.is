@@ -4,7 +4,10 @@
 	<meta property="og:url" content="<%= @fb_url %>" />
 	<meta property="og:title" content="<%= @fb_title %>" />
 	<meta property="og:video" content="<%=@fb_video %>" />
-	<meta property="og:type" content="video.other" />
+	<meta property="og:image" content="<%= @fb_video %>" />
+	<meta property="og:video:height" content="360" />
+  <meta property="og:video:width" content="640" />
+  <meta property="og:video:type" content="application/x-shockwave-flash" />
 	
 	<%= stylesheet_link_tag 'custom', 'application' %>
 	<%= javascript_include_tag 'jquery', 'application' %>
