@@ -6,6 +6,9 @@ Ulysess::App.controllers  do
     @vimeo_video_id = @video.link[/\d+/]
     @comments = @video.comments
     @comment = Comment.new
+    @fb_url = "http://ulysses.it"
+    @fb_title = "Interview with #{@title}"
+    @fb_video = @video.link
     render "layouts/index.erb"
   end
   
@@ -20,6 +23,9 @@ Ulysess::App.controllers  do
     @vimeo_video_id = @video.link[/\d+/]
     @comments = @video.comments
     @comment = Comment.new
+    @fb_url = "http://ulysses.it/#{params[:id]}"
+    @fb_title = "Interview with #{@title}"
+    @fb_video = @video.link
     render "layouts/index.erb"
   end
   
