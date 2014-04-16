@@ -8,7 +8,7 @@ Ulysess::App.controllers  do
     @comment = Comment.new
     @fb_url = "http://ulysses-videos.herokuapp.com/"
     @fb_title = "Interview with #{@title}"
-    @fb_video = @video.link
+    @fb_video ="http://vimeo.com/api/oembed.json?url=http%3A%2F%2Fvimeo.com%2F16034713"
     render "layouts/index.erb"
   end
   
