@@ -47,9 +47,11 @@ body {
       body header nav .nav-left a {
         color: black;
         font-size: 1.5em;
-        padding-right: 20px; }
+        padding-right: 20px;
+        text-decoration: none; }
     body header nav a:hover {
-      color: gray; }
+      color: gray;
+      text-decoration: underline; }
   body .content .video {
     margin: 0 auto;
     width: 800px; }
@@ -88,7 +90,8 @@ body {
       body .content .title .dropit-submenu li:hover {
         background-color: #bad2d2; }
   body .content .comments {
-    margin: 50px 200px; }
+    width: 800px;
+    margin: 0 auto; }
     body .content .comments form input {
       width: 30%;
       margin: 10px 0; }
