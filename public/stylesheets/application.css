@@ -13,8 +13,7 @@ body {
     font-weight: bold;
     font-size: 3em; }
   body h3 {
-    font-size: 2em;
-    margin-top: 0.5em; }
+    font-size: 2em; }
   body .text-center {
     text-align: center; }
   body header nav {
@@ -46,7 +45,7 @@ body {
       width: 200px; }
       body header nav .nav-left a {
         color: black;
-        font-size: 1.5em;
+        font-size: 1.4em;
         padding-right: 20px;
         text-decoration: none; }
     body header nav a:hover {
@@ -91,16 +90,23 @@ body {
         background-color: #bad2d2; }
   body .content .comments {
     width: 800px;
-    margin: 0 auto; }
+    margin: 80px auto 0 auto;
+    font-size: 1.5em; }
     body .content .comments form input {
       width: 30%;
-      margin: 10px 0; }
+      margin: 10px 0;
+      font-size: 21px;
+      font-weight: bold; }
     body .content .comments form textarea {
+      font-family: arial;
       width: 100%;
+      font-size: 21px;
       resize: vertical; }
     body .content .comments form #comment_name {
-      margin-top: 40px; }
+      margin-top: 20px; }
     body .content .comments .name {
       font-weight: bold;
-      margin-top: 20px;
-      margin-bottom: 5px; }
+      margin-top: 25px;
+      margin-bottom: 8px; }
+    body .content .comments .body {
+      color: #0d0d0d; }
