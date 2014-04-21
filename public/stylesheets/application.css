@@ -18,8 +18,9 @@ body {
   body .text-center {
     text-align: center; }
   body header nav {
-    margin: 20px 8%;
-    height: 48px; }
+    margin: 20px auto;
+    height: 25px;
+    width: 800px; }
     body header nav .logo {
       width: 250px;
       display: inline-block; }
@@ -29,20 +30,25 @@ body {
         padding-top: 10px; }
     body header nav span {
       color: gray; }
-    body header nav a {
-      float: right;
-      padding: 10px;
-      width: 48px;
-      height: 48px; }
-  body .content nav {
-    margin: 0 8%; }
-    body .content nav a {
-      color: black;
-      font-size: 1.5em;
-      float: right;
-      padding: 0 10px;
-      margin-top: 20px; }
-    body .content nav a:hover {
+    body header nav .nav-right {
+      display: inline-block;
+      width: 200px;
+      float: right; }
+      body header nav .nav-right a {
+        float: right;
+        padding-left: 20px;
+        width: 24px;
+        height: 24px; }
+      body header nav .nav-right .facebook {
+        width: 15px; }
+    body header nav .nav-left {
+      display: inline-block;
+      width: 200px; }
+      body header nav .nav-left a {
+        color: black;
+        font-size: 1.5em;
+        padding-right: 20px; }
+    body header nav a:hover {
       color: gray; }
   body .content .video {
     margin: 0 auto;
