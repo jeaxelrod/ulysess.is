@@ -4,14 +4,7 @@ html, body {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #f2f2f2;
-  /* .container
-   * background: url('/images/backround-img.jpg')
-   * background-size: auto auto
-   * background-repeat: no-repeat
-   * background-position: right top
-   * background-color: #000
-   * color: #808080 */ }
+  background-color: white; }
   body a {
     color: #336699; }
   body h1 {
@@ -24,22 +17,36 @@ body {
     margin-top: 0.5em; }
   body .text-center {
     text-align: center; }
-  body nav {
-    margin: 0 200px; }
-    body nav .logo {
+  body header nav {
+    margin: 20px 8%;
+    height: 48px; }
+    body header nav .logo {
       width: 250px;
       display: inline-block; }
-      body nav .logo p {
+      body header nav .logo p {
         display: inline-block;
         width: 100%;
         padding-top: 10px; }
-    body nav span {
+    body header nav span {
       color: gray; }
-    body nav a {
+    body header nav a {
       float: right;
-      padding: 10px; }
-  body .content #nav {
-    list-style: none; }
+      padding: 10px;
+      width: 48px;
+      height: 48px; }
+  body .content nav {
+    margin: 0 8%; }
+    body .content nav a {
+      color: black;
+      font-size: 1.5em;
+      float: right;
+      padding: 0 10px;
+      margin-top: 20px; }
+    body .content nav a:hover {
+      color: gray; }
+  body .content .video {
+    margin: 0 auto;
+    width: 800px; }
   body .content a.icon {
     margin: 90px auto;
     display: block;
@@ -48,34 +55,32 @@ body {
     background: url("/images/play_rings.png"); }
   body .content a.icon:hover {
     background: url("/images/play_rings_highlighted.png"); }
-  body .content .dropit {
-    list-style: none; }
-    body .content .dropit a {
-      display: inline-block;
-      margin: 0 auto;
-      width: auto; }
-    body .content .dropit a:hover {
+  body .content .title {
+    font-size: 80px;
+    text-align: center;
+    margin-top: 12px; }
+    body .content .title ul {
+      display: inline-block; }
+    body .content .title a:hover {
       color: #264d73; }
-    body .content .dropit .dropit-trigger {
+    body .content .title .dropit-trigger {
       position: relative;
       text-align: center; }
-    body .content .dropit .dropit-submenu {
+    body .content .title .dropit-submenu {
       position: absolute;
-      width: 500px;
       top: 0;
-      left: 0;
+      left: -5%;
       right: 0;
+      width: 110%;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
       z-index: 1000;
       min-width: 150px;
       background-color: white;
       border: 1px solid #b2b2b2; }
-      body .content .dropit .dropit-submenu li:hover {
-        background-color: #bad2d2; }
-      body .content .dropit .dropit-submenu a {
+      body .content .title .dropit-submenu a {
         width: 100%; }
+      body .content .title .dropit-submenu li:hover {
+        background-color: #bad2d2; }
   body .content .comments {
     margin: 50px 200px; }
     body .content .comments form input {
@@ -90,19 +95,3 @@ body {
       font-weight: bold;
       margin-top: 20px;
       margin-bottom: 5px; }
-  body .video {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.96);
-    top: 0px;
-    left: 0px; }
-    body .video iframe {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-top: -225px;
-      margin-left: -400px;
-      z-index: 3000; }
