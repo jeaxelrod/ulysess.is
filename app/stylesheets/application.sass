@@ -1,3 +1,7 @@
+$blue: #336699
+$gray: #e6e6e6
+$darkgray: #6e6e6e
+
 html, body
   height: 100%
 body
@@ -15,10 +19,20 @@ body
     font-size: 2em
   .text-center
     text-align: center
+  .img-background
+    background: url('/images/naval.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    min-height: 100vh
+    position: relative
+  .img-filter
+    background-color: rgba(217,217, 217, 0.5)
+    min-height: 100vh
   header nav
-    margin: 20px auto
+    padding-top: 4%
+    margin: 0 auto
     height: 25px
-    width: 800px
+    width: 70vw
     .logo
       width: 250px
       display: inline-block
@@ -36,39 +50,85 @@ body
       a
         float: right
         padding-left: 20px
-        width: 24px
-        height: 24px
+        width: 48px
+        height: 48px
+      a.facebook
+        background: url('/images/facebook.png') 
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        padding-left: 53px
+      a.twitter
+        background: url('/images/twitter.png') 
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+      a.facebook:hover 
+        background: url('/images/facebook_highlighted.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+      a.twitter:hover
+        background: url('/images/twitter_highlighted.png') 
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+      img
+        width: 48px
+        height: 48px
       .facebook
         width: 15px
     .nav-left 
       display: inline-block
-      width: 200px
+      width: 300px
+      font-size: 2em
 
       a
-        color: black
+        color: #e6e6e6
         padding-right: 20px
         text-decoration: none
     a:hover 
-      color: gray
-      text-decoration: underline
-    .facebook
+      color: $blue
   .content
     .video
-      margin: 0 auto
-      width: 800px
+      background-color: rgba(0,0,0,0.9)
+      z-index: 1000
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      iframe
+        margin: 0 auto
+        width: 800px
+        position: absolute
+        top: 75px
+        left: 50%
+        margin-left: -400px
+        z-index: 1000
     h1
     a.icon
-      margin: 90px auto
+      margin: 150px auto
       display: block
-      width: 200px
-      height: 200px
+      width: 100px
+      height: 100px
       background: url('/images/play_rings.png')
+      background-size: cover
     a.icon:hover
       background: url('/images/play_rings_highlighted.png')
+      background-size: cover
     .title
+      color: rgb(110, 110, 110)
       font-size: 80px
       text-align: center 
+      padding: 15px 0
       margin-top: 12px 
+      background-color: rgba(255,255,255,.5)
+      position: absolute
+      bottom: 0
+      min-width: 100%
+      display: block
       ul
         display: inline-block   
       a:hover
@@ -92,9 +152,12 @@ body
         li:hover
           background-color: #bad2d2
     .comments-container
+      background-color: rgba(51,102,153,.5)
     .comments
       width: 800px
-      margin: 80px auto 0 auto
+      margin: 40px auto 0 auto
+      padding-top: 40px
+      text-align: center
 
       form
         input
@@ -104,7 +167,7 @@ body
           font-weight: bold
         textarea
           font-family: arial
-          width: 100%
+          width: 36%
           font-size: 14px
           resize: vertical
         #comment_name
@@ -112,11 +175,11 @@ body
       .name
         font-weight: bold
         margin-top: 25px 
-        margin-bottom: 8px
+        margin-bottom: 5px
       .body
         color: #0d0d0d
       .body:last-child
-        margin-bottom: 20px
+        padding-bottom: 20px
           
 
     

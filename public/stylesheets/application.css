@@ -16,10 +16,20 @@ body {
     font-size: 2em; }
   body .text-center {
     text-align: center; }
+  body .img-background {
+    background: url("/images/naval.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative; }
+  body .img-filter {
+    background-color: rgba(217, 217, 217, 0.5);
+    min-height: 100vh; }
   body header nav {
-    margin: 20px auto;
+    padding-top: 4%;
+    margin: 0 auto;
     height: 25px;
-    width: 800px; }
+    width: 70vw; }
     body header nav .logo {
       width: 250px;
       display: inline-block; }
@@ -36,35 +46,82 @@ body {
       body header nav .nav-right a {
         float: right;
         padding-left: 20px;
-        width: 24px;
-        height: 24px; }
+        width: 48px;
+        height: 48px; }
+      body header nav .nav-right a.facebook {
+        background: url("/images/facebook.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-left: 53px; }
+      body header nav .nav-right a.twitter {
+        background: url("/images/twitter.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; }
+      body header nav .nav-right a.facebook:hover {
+        background: url("/images/facebook_highlighted.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; }
+      body header nav .nav-right a.twitter:hover {
+        background: url("/images/twitter_highlighted.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; }
+      body header nav .nav-right img {
+        width: 48px;
+        height: 48px; }
       body header nav .nav-right .facebook {
         width: 15px; }
     body header nav .nav-left {
       display: inline-block;
-      width: 200px; }
+      width: 300px;
+      font-size: 2em; }
       body header nav .nav-left a {
-        color: black;
+        color: #e6e6e6;
         padding-right: 20px;
         text-decoration: none; }
     body header nav a:hover {
-      color: gray;
-      text-decoration: underline; }
+      color: #336699; }
   body .content .video {
-    margin: 0 auto;
-    width: 800px; }
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    body .content .video iframe {
+      margin: 0 auto;
+      width: 800px;
+      position: absolute;
+      top: 75px;
+      left: 50%;
+      margin-left: -400px;
+      z-index: 1000; }
   body .content a.icon {
-    margin: 90px auto;
+    margin: 150px auto;
     display: block;
-    width: 200px;
-    height: 200px;
-    background: url("/images/play_rings.png"); }
+    width: 100px;
+    height: 100px;
+    background: url("/images/play_rings.png");
+    background-size: cover; }
   body .content a.icon:hover {
-    background: url("/images/play_rings_highlighted.png"); }
+    background: url("/images/play_rings_highlighted.png");
+    background-size: cover; }
   body .content .title {
+    color: #6e6e6e;
     font-size: 80px;
     text-align: center;
-    margin-top: 12px; }
+    padding: 15px 0;
+    margin-top: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    display: block; }
     body .content .title ul {
       display: inline-block; }
     body .content .title a:hover {
@@ -87,9 +144,13 @@ body {
         width: 100%; }
       body .content .title .dropit-submenu li:hover {
         background-color: #bad2d2; }
+  body .content .comments-container {
+    background-color: rgba(51, 102, 153, 0.5); }
   body .content .comments {
     width: 800px;
-    margin: 80px auto 0 auto; }
+    margin: 40px auto 0 auto;
+    padding-top: 40px;
+    text-align: center; }
     body .content .comments form input {
       width: 30%;
       margin: 10px 0;
@@ -97,7 +158,7 @@ body {
       font-weight: bold; }
     body .content .comments form textarea {
       font-family: arial;
-      width: 100%;
+      width: 36%;
       font-size: 14px;
       resize: vertical; }
     body .content .comments form #comment_name {
@@ -105,8 +166,8 @@ body {
     body .content .comments .name {
       font-weight: bold;
       margin-top: 25px;
-      margin-bottom: 8px; }
+      margin-bottom: 5px; }
     body .content .comments .body {
       color: #0d0d0d; }
     body .content .comments .body:last-child {
-      margin-bottom: 20px; }
+      padding-bottom: 20px; }

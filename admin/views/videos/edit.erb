@@ -4,6 +4,12 @@
   <li class="active"> <%= link_to tag_icon(:edit, pat(:edit)), url(:videos, :edit, :id => @video.id) %></li>
 </ul>
 <div class="tabs-content">
+  <% if @video.picture.path %>
+    <div class="picture">
+      Current Background pic:
+      <%= image_tag @video.picture %>
+    </div>
+  <% end %>
   <% form_for :video, url(:videos, :update, :id => @video.id), :method => :put, :class => 'form-horizontal' do |f| %>
     <%= partial 'videos/form', :locals => { :f => f } %>
   <% end %>

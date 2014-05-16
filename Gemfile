@@ -19,6 +19,8 @@ gem 'sass'
 gem 'erubis', '~> 2.7.0'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'sqlite3', group: :development
+gem 'carrierwave', :require => %w(carrierwave carrierwave/orm/activerecord)
+gem 'fog', '~> 1.3.1'
 
 # Test requirements
 gem 'rspec', :group => 'test'

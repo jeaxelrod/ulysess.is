@@ -1,62 +1,69 @@
 <div class="container">
-  <header>
-    <nav>
-      <div class="nav-left">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="nav-right">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fulysses-videos.herokuapp.com" class="facebook" target="_blank"><img src="/images/facebook.png" /></a>   
-        <a href="https://twitter.com/share" target="_blank"><img src="/images/twitter.png" /></a>
-      </div>
-    </nav>
-  </header>
+  <div class="img-background">
+    <div class="img-filter">
+      <header>
+        <nav>
+          <div class="nav-left">
+            <a href="#">about</a>
+            <a href="#">contact</a>
+          </div>
+          <div class="nav-right">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fulysses-videos.herokuapp.com" class="facebook" target="_blank"></a>   
+            <a href="https://twitter.com/share" class="twitter" target="_blank"></a>
+          </div>
+        </nav>
+      </header>
 
-  <div class="content">
-    <div class="video">
-      <iframe id="vimeo-player" src="//player.vimeo.com/video/<%= @vimeo_video_id %>?portrait=0&byline=0&title=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
-   <div class="title"> Ulysses is 
-      <ul class="menu"> 
-        <li>
-         <a href="#"><%= @video.title %></a>
-          <ul>
-           <li><a class="text-center" href="/<%= @video.id %>"><%= @video.title %></a></li>
-            <% @videos.each do |video| %>
-              <% unless @video == video %>
-                 <li><a class="text-center" href="/<%= video.id %>"><%= video.title %></a></li>
-              <% end %>
-            <% end %>
+      <div class="content">
+        <div>
+          <a class="icon" href="#"></a>
+        </div>
+        <div class="video">
+          <iframe id="vimeo-player" src="//player.vimeo.com/video/<%= @vimeo_video_id %>?portrait=0&byline=0&title=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div class="title"> Ulysses is 
+          <ul class="menu"> 
+            <li>
+              <a href="#"><%= @video.title %></a>
+              <ul>
+                <li><a class="text-center" href="/<%= @video.id %>"><%= @video.title %></a></li>
+                <% @videos.each do |video| %>
+                  <% unless @video == video %>
+                     <li><a class="text-center" href="/<%= video.id %>"><%= video.title %></a></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="comments-container">
-      <div class="comments">
-        <h3>Comments</h3>
-        <% form_for @comment, url(:comments, :create) do |f| %>
-          <%= f.error_messages %>
-          
-          <p>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-          </p>
-          
-          <p>
-            <%= f.text_area :body %>
-          </p>
-          
-          <%= f.hidden_field :video_id, value: @video.id %>
-          
-          <p>
-            <%= f.submit "Create Post", class: "button" %>
-          </p>
-        <% end %>
-        <% @comments.each do |comment| %>
-          <div class="name"><%= comment.name %></div>
-          <div class="body"><%= comment.body %></div>
-        <% end %>
+        </div>
       </div>
+    </div>
+  </div>
+  <div class="comments-container">
+    <div class="comments">
+      <h3>Comments</h3>
+      <% form_for @comment, url(:comments, :create) do |f| %>
+        <%= f.error_messages %>
+        
+        <p>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </p>
+        
+        <p>
+          <%= f.text_area :body %>
+        </p>
+        
+        <%= f.hidden_field :video_id, value: @video.id %>
+        
+        <p>
+          <%= f.submit "Create Post", class: "button" %>
+        </p>
+      <% end %>
+      <% @comments.each do |comment| %>
+        <div class="name"><%= comment.name %></div>
+        <div class="body"><%= comment.body %></div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -64,5 +71,13 @@
 <script>
   $(document).ready(function() {
     $('.menu').dropit();
+    $('.icon').click(function() {
+      $('.video').toggle();
+      return false; 
+     });
+    $('.video').click(function() {
+      $('.video').toggle();
+      return false; 
+    });
   });
 </script>

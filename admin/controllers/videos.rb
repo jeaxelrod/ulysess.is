@@ -39,7 +39,8 @@ Ulysess::Admin.controllers :videos do
     @title = pat(:update_title, :model => "video #{params[:id]}")
     @video = Video.find(params[:id])
     if @video
-      if @video.update_attributes(params[:video])
+      @video.picture = params[:picture]
+      if @video.update_attributes(params[:video]) && @video.save!
         flash[:success] = pat(:update_success, :model => 'Video', :id =>  "#{params[:id]}")
         params[:save_and_continue] ?
           redirect(url(:videos, :index)) :

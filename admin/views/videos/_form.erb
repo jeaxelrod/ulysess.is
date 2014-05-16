@@ -31,6 +31,13 @@
   </div>
 </fieldset>
 
+<fieldset class='control-group <%= error ? 'has-error' : '' %>'>
+  <%= f.label "Background", :class =>'control-label' %>
+  <div class='controls'>
+    <%= f.file_field :picture %>
+    <span class='help-inline'><%= error ? f.error_message_on(:picture) : "Size: 1600 x 800px" %></span>
+  </div>
+</fieldset>
 
 <div class="form-actions">
   <%= f.submit pat(:save), :class => 'btn btn-primary' %>
