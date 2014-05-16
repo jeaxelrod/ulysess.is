@@ -8,7 +8,7 @@ require 'bundler/setup'
 Bundler.require(:default, RACK_ENV)
 
 CarrierWave.configure do |config|
-  config.root = Padrino.root.join('tmp')
+  config.root = Padrino.root 'tmp'
   config.cache_dir = 'carrierwave'
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
