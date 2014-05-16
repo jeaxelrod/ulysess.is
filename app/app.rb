@@ -5,7 +5,7 @@ module Ulysess
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
-
+    CarrierWave.root = File.join(Padrino.root, "public")
     enable :sessions
 
     ##
