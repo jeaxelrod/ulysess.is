@@ -4,7 +4,7 @@ Ulysess::App.controllers  do
     @video = Video.first
     @title = @video.title
     @vimeo_video_id = @video.link[/\d+/]
-    @picture = Padrino.root @video.picture.url
+   # @picture = Padrino.root @video.picture.url
     @comments = @video.comments
     @comment = Comment.new
     @fb_url = "http://ulysses-videos.herokuapp.com/"
