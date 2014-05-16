@@ -1,4 +1,4 @@
-# Defines our constants
+S# Defines our constants
 RACK_ENV = ENV['RACK_ENV'] ||= 'development'  unless defined?(RACK_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 
@@ -12,11 +12,9 @@ CarrierWave.configure do |config|
     :provider               => 'AWS',                        # required
     :aws_access_key_id      => ENV['ACCESS_KEY_ID'],                        # required
     :aws_secret_access_key  => ENV['SECRET_ACCESS_KEY'],                        # required
-    :region                 => 'eu-west-1',                  # optional, defaults to 'us-east-1'
-    :host                   => 's3.example.com',             # optional, defaults to nil
-    :endpoint               => 'https://s3.example.com:8080' # optional, defaults to nil
+    :region                 => 'eu-west-1'                 # optional, defaults to 'us-east-1'
   }
-  config.fog_directory  = 'name_of_directory'                     # required
+  config.fog_directory  = 'public/images'                     # required
   config.fog_public     = false                                   # optional, defaults to true
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
 end
