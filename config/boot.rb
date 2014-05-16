@@ -8,11 +8,12 @@ require 'bundler/setup'
 Bundler.require(:default, RACK_ENV)
 
 CarrierWave.configure do |config|
+  config.root = Padrino.root.join('tmp')
+  config.cache_dir = 'carrierwave'
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
     :aws_access_key_id      => ENV['ACCESS_KEY_ID'],                        # required
-    :aws_secret_access_key  => ENV['SECRET_ACCESS_KEY'],                        # required
-    :region                 => 'eu-west-1'                 # optional, defaults to 'us-east-1'
+    :aws_secret_access_key  => ENV['SECRET_ACCESS_KEY']                       # required
   }
   config.fog_directory  = 'Ulysses'                     # required
   config.fog_public     = false                                   # optional, defaults to true
