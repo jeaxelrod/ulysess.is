@@ -293,6 +293,9 @@ footer p {
 .list-menu-popover-delete-selected-btn {
   margin-right: 10px;
 }
+.picture {
+  width: 600px
+}
 /* ---- End Application::List::ActionsOnList ---- */
 
 /* --- End Application::List --- */

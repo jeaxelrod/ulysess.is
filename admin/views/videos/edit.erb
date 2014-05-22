@@ -4,12 +4,13 @@
   <li class="active"> <%= link_to tag_icon(:edit, pat(:edit)), url(:videos, :edit, :id => @video.id) %></li>
 </ul>
 <div class="tabs-content">
-  <% if @video.picture.path %>
-    <div class="picture">
+  <div class="picture">
+    <% if @video.picture.path %>
       Current Background pic:
-      <%= image_tag @video.picture %>
-    </div>
-  <% end %>
+      <%= image_tag @video.picture, class:"img-responsive" %>
+    <% end %>
+    <%= link_to 'Preview Page', "/#{@video.id}", class:'btn btn-primary', role: 'button' %>
+  </div>
   <% form_for :video, url(:videos, :update, :id => @video.id), :method => :put, :class => 'form-horizontal' do |f| %>
     <%= partial 'videos/form', :locals => { :f => f } %>
   <% end %>

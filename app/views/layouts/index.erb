@@ -1,11 +1,13 @@
 <div class="container">
-  <div class="img-background">
+  <div class="img-background" style="background-image: url('<%= @video.picture %>');">
     <div class="img-filter">
       <header>
         <nav>
           <div class="nav-left">
-            <a href="#">about</a>
-            <a href="#">contact</a>
+            <a id="about" href="#">about</a>
+            <a id="contact" href="#">contact</a>
+            <p id="about-text">Here is some about text</p>
+            <p id="contact-text">axelrod.jeremy@gmail.com</p>
           </div>
           <div class="nav-right">
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fulysses-videos.herokuapp.com" class="facebook" target="_blank"></a>   
@@ -78,6 +80,12 @@
     $('.video').click(function() {
       $('.video').toggle();
       return false; 
+    });
+    $('#about').click( function() {
+      $('#about-text').toggle();
+    });
+    $('#contact').click( function() {
+      $('#contact-text').toggle();
     });
   });
 </script>
