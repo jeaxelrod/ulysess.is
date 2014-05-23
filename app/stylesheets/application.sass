@@ -29,10 +29,10 @@ body
     background-color: rgba(237,237, 237, 0.5)
     min-height: 100vh
   header nav
-    padding-top: 4%
+    padding-top: 1.5% 
     margin: 0 auto
     height: 25px
-    width: 70vw
+    width: 98%
     .logo
       width: 250px
       display: inline-block
@@ -49,7 +49,7 @@ body
 
       a
         float: right
-        padding-left: 20px
+        padding-left: 40px
         width: 48px
         height: 48px
       a.facebook
@@ -85,7 +85,7 @@ body
 
       a
         color: $gray
-        padding-right: 20px
+        padding-right: 40px
         text-decoration: none
 
       #about-text, #contact-text 
@@ -114,7 +114,7 @@ body
         z-index: 1000
     h1
     a.icon
-      margin: 150px auto
+      margin: 12% auto
       display: block
       width: 100px
       height: 100px
@@ -156,35 +156,36 @@ body
           width: 100%
         li:hover
           background-color: #bad2d2
-    .comments-container
-      background-color: rgba(51,102,153,.5)
-    .comments
-      width: 800px
-      margin: 40px auto 0 auto
-      padding-top: 40px
-      text-align: center
-
-      form
-        input
-          width: 30%
-          margin: 10px 0
-          font-size: 14px
-          font-weight: bold
-        textarea
-          font-family: arial
-          width: 36%
-          font-size: 14px
-          resize: vertical
-        #comment_name
-          margin-top: 20px
-      .name
+  .comments-containerh
+  .comments
+    background-color: rgba(237,237, 237, 0.5)
+    width: available
+    margin: 0 auto 0 auto
+    padding: 0 200px
+    text-align: left
+    h3
+      padding-top: 50px
+    form
+      input
+        width: 30%
+        margin: 10px 0
+        font-size: 14px
         font-weight: bold
-        margin-top: 25px 
-        margin-bottom: 5px
-      .body
-        color: #0d0d0d
-      .body:last-child
-        padding-bottom: 20px
+      textarea
+        font-family: arial
+        width: 36%
+        font-size: 14px
+        resize: vertical
+      #comment_name
+        margin-top: 20px
+    .name
+      font-weight: bold
+      margin-top: 25px 
+      margin-bottom: 5px
+    .body
+      color: #0d0d0d
+    .body:last-child
+      padding-bottom: 20px
 
 
     

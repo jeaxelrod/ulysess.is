@@ -26,10 +26,10 @@ body {
     background-color: rgba(237, 237, 237, 0.5);
     min-height: 100vh; }
   body header nav {
-    padding-top: 4%;
+    padding-top: 1.5%;
     margin: 0 auto;
     height: 25px;
-    width: 70vw; }
+    width: 98%; }
     body header nav .logo {
       width: 250px;
       display: inline-block; }
@@ -45,7 +45,7 @@ body {
       float: right; }
       body header nav .nav-right a {
         float: right;
-        padding-left: 20px;
+        padding-left: 40px;
         width: 48px;
         height: 48px; }
       body header nav .nav-right a.facebook {
@@ -80,7 +80,7 @@ body {
       font-size: 2em; }
       body header nav .nav-left a {
         color: #e6e6e6;
-        padding-right: 20px;
+        padding-right: 40px;
         text-decoration: none; }
       body header nav .nav-left #about-text, body header nav .nav-left #contact-text {
         display: none;
@@ -106,7 +106,7 @@ body {
       margin-left: -400px;
       z-index: 1000; }
   body .content a.icon {
-    margin: 150px auto;
+    margin: 12% auto;
     display: block;
     width: 100px;
     height: 100px;
@@ -148,30 +148,31 @@ body {
         width: 100%; }
       body .content .title .dropit-submenu li:hover {
         background-color: #bad2d2; }
-  body .content .comments-container {
-    background-color: rgba(51, 102, 153, 0.5); }
-  body .content .comments {
-    width: 800px;
-    margin: 40px auto 0 auto;
-    padding-top: 40px;
-    text-align: center; }
-    body .content .comments form input {
+  body .comments {
+    background-color: rgba(237, 237, 237, 0.5);
+    width: available;
+    margin: 0 auto 0 auto;
+    padding: 0 200px;
+    text-align: left; }
+    body .comments h3 {
+      padding-top: 50px; }
+    body .comments form input {
       width: 30%;
       margin: 10px 0;
       font-size: 14px;
       font-weight: bold; }
-    body .content .comments form textarea {
+    body .comments form textarea {
       font-family: arial;
       width: 36%;
       font-size: 14px;
       resize: vertical; }
-    body .content .comments form #comment_name {
+    body .comments form #comment_name {
       margin-top: 20px; }
-    body .content .comments .name {
+    body .comments .name {
       font-weight: bold;
       margin-top: 25px;
       margin-bottom: 5px; }
-    body .content .comments .body {
+    body .comments .body {
       color: #0d0d0d; }
-    body .content .comments .body:last-child {
+    body .comments .body:last-child {
       padding-bottom: 20px; }
