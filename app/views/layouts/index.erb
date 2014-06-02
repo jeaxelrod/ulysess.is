@@ -42,7 +42,7 @@
       </div>
     </div>
   </div>
-  <div class="comments-container">
+  <div class="second-container">
     <div class="comments">
       <h3>Comments</h3>
       <% @comments.each do |comment| %>
@@ -68,6 +68,15 @@
         </p>
       <% end %>
     </div>
+    <div class="other-videos">
+      <h3>Ulysses is ... </h3>
+      <% @videos.each do |video| %>
+        <div class="individual-videos" style="background-image: url('<%= video.picture %>');">
+          <div class="individual-filter" >
+            <h4><%= video.title %></h4>
+          </div>
+        </div>
+      <% end %>
   </div>
 </div>
 <img style="display:none" src="/images/play_rings_highlighted.png"/>
@@ -83,10 +92,20 @@
       return false; 
     });
     $('#about').click( function() {
+      $('#contact-text').hide();
       $('#about-text').toggle();
     });
     $('#contact').click( function() {
+      $('#about-text').hide();
       $('#contact-text').toggle();
     });
+    $('.individual-filter').hover( 
+      function() {
+        $(this).css("background-color", "transparent");
+      },
+      function() {
+        $(this).css("background-color", "rgba(191, 191, 191, 0.5)");
+      }
+    );
   });
 </script>

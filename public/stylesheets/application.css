@@ -148,18 +148,20 @@ body {
         width: 100%; }
       body .content .title .dropit-submenu li:hover {
         background-color: #bad2d2; }
+  body .second-container {
+    background-color: #bfbfbf; }
   body .comments {
-    background-color: white;
     width: available;
-    margin: 0 auto 0 auto;
+    display: inline-block;
+    margin-left: 150px;
     padding: 0;
     width: 450px;
-    text-align: left; }
+    text-align: left;
+    margin-top: 20px; }
     body .comments h3 {
       padding-bottom: 10px;
-      padding-top: 20px;
-      border-bottom: 2px solid lightgray;
-      color: #0d0d0d; }
+      border-bottom: 2px solid #e9e9e9;
+      color: #e9e9e9; }
     body .comments form {
       margin-top: 20px; }
       body .comments form input {
@@ -175,17 +177,44 @@ body {
       body .comments form .button {
         width: 50%; }
       body .comments form #label-name {
-        font-weight: bold; }
+        font-weight: bold;
+        color: #e9e9e9; }
     body .comments .name {
       font-weight: bold;
       margin-top: 20px;
       margin-bottom: 5px;
-      border-bottom: 1px solid lightgray;
+      border-bottom: 1px solid #868686;
       padding-bottom: 3px;
-      color: #0d0d0d; }
+      color: #868686; }
     body .comments .body {
-      color: #0d0d0d;
+      color: #868686;
       font-family: georgia, times;
       line-height: 1.4em; }
+      body .comments .body p {
+        margin-top: 0.5em; }
     body .comments .body:last-child {
       padding-bottom: 20px; }
+  body .other-videos {
+    margin: 0;
+    display: inline-block;
+    float: right;
+    margin-right: 150px;
+    margin-top: 20px;
+    color: white; }
+    body .other-videos .individual-filter {
+      background-color: rgba(191, 191, 191, 0.5);
+      width: 450px;
+      height: 225px; }
+    body .other-videos .individual-videos {
+      background-size: cover;
+      margin: 10px; }
+    body .other-videos h3 {
+      margin-bottom: 10px;
+      color: #e9e9e9; }
+    body .other-videos h4 {
+      display: block;
+      font-size: 1.75em;
+      position: relative;
+      color: #e9e9e9;
+      top: 200px;
+      text-align: right; }
