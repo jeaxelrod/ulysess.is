@@ -1,4 +1,4 @@
-$blue: #336699
+$blue: #538cc6
 $gray: #e6e6e6
 $darkgray: #6e6e6e
 
@@ -124,7 +124,7 @@ body
       background: url('/images/play_rings_highlighted.png')
       background-size: cover
     .title
-      color: rgb(110, 110, 110)
+      color: #949494
       font-size: 80px
       text-align: center 
       padding: 15px 0
@@ -137,7 +137,7 @@ body
       ul
         display: inline-block   
       a:hover
-        color: #264d73
+        color: #369
       .dropit-trigger
         position: relative
         text-align: center
@@ -156,34 +156,48 @@ body
           width: 100%
         li:hover
           background-color: #bad2d2
-  .comments-containerh
+  .comments-container
   .comments
-    background-color: rgba(237,237, 237, 0.5)
+    background-color: white
     width: available
     margin: 0 auto 0 auto
-    padding: 0 200px
+    padding: 0 
+    width: 450px
     text-align: left
     h3
-      padding-top: 50px
+      padding-bottom: 10px
+      padding-top: 20px
+      border-bottom: 2px solid #d3d3d3
+      color: #0d0d0d
     form
+      margin-top: 20px
       input
-        width: 30%
+        width: 100%
         margin: 10px 0
         font-size: 14px
         font-weight: bold
       textarea
         font-family: arial
-        width: 36%
+        width: 100%
         font-size: 14px
         resize: vertical
+      .button
+        width: 50%
+      #label-name
+        font-weight: bold
       #comment_name
-        margin-top: 20px
     .name
       font-weight: bold
-      margin-top: 25px 
+      margin-top: 20px 
       margin-bottom: 5px
+      border-bottom: 1px solid #d3d3d3
+      padding-bottom: 3px
+      color: #0d0d0d
+
     .body
       color: #0d0d0d
+      font-family: georgia, times
+      line-height: 1.4em
     .body:last-child
       padding-bottom: 20px
 

@@ -6,7 +6,7 @@ body {
   font-size: 14px;
   background-color: white; }
   body a {
-    color: #336699; }
+    color: #538cc6; }
   body h1 {
     font-size: 4em; }
   body h2 {
@@ -87,7 +87,7 @@ body {
         color: #e6e6e6;
         width: 350px; }
     body header nav a:hover {
-      color: #336699; }
+      color: #538cc6; }
   body .content .video {
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
@@ -116,7 +116,7 @@ body {
     background: url("/images/play_rings_highlighted.png");
     background-size: cover; }
   body .content .title {
-    color: #6e6e6e;
+    color: #949494;
     font-size: 80px;
     text-align: center;
     padding: 15px 0;
@@ -129,7 +129,7 @@ body {
     body .content .title ul {
       display: inline-block; }
     body .content .title a:hover {
-      color: #264d73; }
+      color: #336699; }
     body .content .title .dropit-trigger {
       position: relative;
       text-align: center; }
@@ -149,30 +149,43 @@ body {
       body .content .title .dropit-submenu li:hover {
         background-color: #bad2d2; }
   body .comments {
-    background-color: rgba(237, 237, 237, 0.5);
+    background-color: white;
     width: available;
     margin: 0 auto 0 auto;
-    padding: 0 200px;
+    padding: 0;
+    width: 450px;
     text-align: left; }
     body .comments h3 {
-      padding-top: 50px; }
-    body .comments form input {
-      width: 30%;
-      margin: 10px 0;
-      font-size: 14px;
-      font-weight: bold; }
-    body .comments form textarea {
-      font-family: arial;
-      width: 36%;
-      font-size: 14px;
-      resize: vertical; }
-    body .comments form #comment_name {
+      padding-bottom: 10px;
+      padding-top: 20px;
+      border-bottom: 2px solid lightgray;
+      color: #0d0d0d; }
+    body .comments form {
       margin-top: 20px; }
+      body .comments form input {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
+        font-weight: bold; }
+      body .comments form textarea {
+        font-family: arial;
+        width: 100%;
+        font-size: 14px;
+        resize: vertical; }
+      body .comments form .button {
+        width: 50%; }
+      body .comments form #label-name {
+        font-weight: bold; }
     body .comments .name {
       font-weight: bold;
-      margin-top: 25px;
-      margin-bottom: 5px; }
-    body .comments .body {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 3px;
       color: #0d0d0d; }
+    body .comments .body {
+      color: #0d0d0d;
+      font-family: georgia, times;
+      line-height: 1.4em; }
     body .comments .body:last-child {
       padding-bottom: 20px; }
