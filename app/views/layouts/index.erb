@@ -24,19 +24,21 @@
           <iframe id="vimeo-player" src="//player.vimeo.com/video/<%= @vimeo_video_id %>?portrait=0&byline=0&title=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div class="title"> 
-          <span>Ulysses is</span>
+          Ulysses is
           <ul class="menu"> 
-            <li>
-              <a href="#"><%= @video.title %></a>
-              <ul>
-                <li><a class="text-center" href="/<%= @video.id %>"><%= @video.title %></a></li>
-                <% @videos.each do |video| %>
-                  <% unless @video == video %>
-                     <li><a class="text-center" href="/<%= video.id %>"><%= video.title %></a></li>
+            <span>
+              <%= @video.title %>
+              <% if false %>
+                <ul>
+                  <li><a class="text-center" href="/<%= @video.id %>"><%= @video.title %></a></li>
+                  <% @videos.each do |video| %>
+                    <% unless @video == video %>
+                       <li><a class="text-center" href="/<%= video.id %>"><%= video.title %></a></li>
+                    <% end %>
                   <% end %>
-                <% end %>
-              </ul>
-            </li>
+                </ul> 
+              <% end %>
+            </span>
           </ul>
         </div>
       </div>
@@ -71,11 +73,14 @@
     <div class="other-videos">
       <h3>Ulysses is ... </h3>
       <% @videos.each do |video| %>
-        <div class="individual-videos" style="background-image: url('<%= video.picture %>');">
-          <div class="individual-filter" >
-            <h4><%= video.title %></h4>
+        <a href="/<%= video.id %>">
+          <div class="individual-videos" style="background-image: url('<%= video.picture %>');">
+            <div class="individual-filter" id="<%= video.id %>" >
+              <h2 id="description-<%= video.id %>"><%= video.description %></h2>
+              <h4><%= video.title %></h4>
+            </div>
           </div>
-        </div>
+        </a>
       <% end %>
   </div>
 </div>
@@ -101,9 +106,12 @@
     });
     $('.individual-filter').hover( 
       function() {
+        $("#description-" + this.id).css("width", $(this).width());
+        $("#description-" + this.id).fadeIn();
         $(this).css("background-color", "transparent");
       },
       function() {
+        $("#description-" + this.id).hide();
         $(this).css("background-color", "rgba(191, 191, 191, 0.5)");
       }
     );
