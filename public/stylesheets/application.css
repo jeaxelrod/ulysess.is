@@ -79,12 +79,12 @@ body {
       width: 300px;
       font-size: 2em; }
       body header nav .nav-left a {
-        color: #e6e6e6;
+        color: rgba(255, 255, 255, 0.8);
         padding-right: 40px;
         text-decoration: none; }
       body header nav .nav-left #about-text, body header nav .nav-left #contact-text {
         display: none;
-        color: #e6e6e6;
+        color: rgba(255, 255, 255, 0.8);
         width: 350px; }
     body header nav a:hover {
       color: #538cc6; }
