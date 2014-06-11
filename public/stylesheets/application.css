@@ -20,11 +20,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     position: relative; }
   body .img-filter {
     background-color: rgba(237, 237, 237, 0.5);
-    min-height: 100vh; }
+    height: 100vh; }
   body header nav {
     padding-top: 1.5%;
     margin: 0 auto;
