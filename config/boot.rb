@@ -13,8 +13,8 @@ CarrierWave.configure do |config|
   config.cache_dir = 'carrierwave'
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
-    :aws_access_key_id      => "AKIAI56QFOKTSFVQZ5WA",                        # required
-    :aws_secret_access_key  => "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"                       # required
+    :aws_access_key_id      => ENV['ACCESS_KEY_ID'],                        # required
+    :aws_secret_access_key  => ENV['SECRET_ACCESS_KEY']                       # required
   }
   config.fog_directory  = 'Ulysses'                     # required
   config.fog_public     = true                                  # optional, defaults to true
