@@ -1,7 +1,7 @@
 Ulysess::App.controllers  do
   get "/" do
-    @videos = Video.all
-    @video = Video.first
+    @video = Video.last
+    @videos = Video.where.not(id: @video.id).reverse_order
     @title = @video.title
     @vimeo_video_id = @video.link[/\d+/]
    # @picture = Padrino.root @video.picture.url
@@ -20,7 +20,7 @@ Ulysess::App.controllers  do
   
   get "/:id" do
     @video = Video.find(params[:id])
-    @videos = Video.all
+    @videos = Video.where.not(id: @video.id).reverse_order
     @title = @video.title
     @vimeo_video_id = @video.link[/\d+/]
     @comments = @video.comments
