@@ -214,7 +214,7 @@ body {
       padding-top: 45%; }
     body .other-videos .individual-videos {
       background-size: cover;
-      margin: 10px; }
+      margin-bottom: 10px; }
     body .other-videos h2 {
       display: none;
       margin-top: -8.5%;
