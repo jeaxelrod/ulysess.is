@@ -275,7 +275,7 @@ body {
       padding-right: 0; }
     body header nav .nav-left a:first-child {
       padding-right: 10px; }
-    body header nav .nav-left p#about-text {
+    body header nav .nav-left p#about-text, body header nav .nav-left p#contact-text {
       font-size: 0.8em;
       width: 98vw; }
   body header nav .nav-right {
@@ -299,7 +299,7 @@ body {
       width: 100%;
       margin: 0;
       padding: 0;
-      top: 30%;
+      top: 30vh;
       left: 0;
       height: 200px; }
   body .other-videos {
