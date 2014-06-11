@@ -275,11 +275,16 @@ body {
       padding-right: 0; }
     body header nav .nav-left a:first-child {
       padding-right: 10px; }
-    body header nav .nav-left p {
-      font-size: 0.8em; }
+    body header nav .nav-left p#about-text {
+      font-size: 0.8em;
+      width: 98vw; }
   body header nav .nav-right {
     width: 49%; }
-    body header nav .nav-right a:nth-child(2) {
+    body header nav .nav-right a.twitter {
+      padding-left: 0; }
+    body header nav .nav-right a.facebook {
+      width: 30px;
+      margin-left: 20px;
       padding-left: 0; }
     body header nav .nav-right a {
       width: 30px;
@@ -287,10 +292,19 @@ body {
   body .content .title {
     font-size: 40px; }
   body .content a.icon {
-    margin-top: 40%; }
+    margin-top: 25vh; }
+  body .content .video {
+    width: 100%; }
+    body .content .video iframe {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      top: 30%;
+      left: 0;
+      height: 200px; }
   body .other-videos {
     margin-left: 5%;
-    width: 40%; }
+    width: 41%; }
     body .other-videos h3 {
       font-size: 1.5em; }
     body .other-videos .individual-videos {
@@ -313,7 +327,8 @@ body {
           width: 100%; }
   body .comments {
     margin-left: 5%;
-    width: 40%; }
+    margin-right: 5%;
+    width: 41%; }
     body .comments h3 {
       font-size: 1.5em; }
     body .comments .name {

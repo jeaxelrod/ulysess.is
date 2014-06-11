@@ -115,13 +115,17 @@
     });
     $('.individual-filter').hover( 
       function() {
-        $("#description-" + this.id).css("width", $(this).width());
-        $("#description-" + this.id).fadeIn();
-        $(this).css("background-color", "transparent");
+        if ($(window.width() > 640)) {
+          $("#description-" + this.id).css("width", $(this).width());
+          $("#description-" + this.id).fadeIn();
+          $(this).css("background-color", "transparent");
+        }
       },
       function() {
-        $("#description-" + this.id).hide();
-        $(this).css("background-color", "rgba(191, 191, 191, 0.5)");
+        if ($window.width() > 640) {
+          $("#description-" + this.id).hide();
+          $(this).css("background-color", "rgba(191, 191, 191, 0.5)");
+        }
       }
     );
   });
