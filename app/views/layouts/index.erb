@@ -96,7 +96,6 @@
 <img style="display:none" src="/images/play_rings_highlighted.png"/>
 <script>
   $(document).ready(function() {
-    $('.menu').dropit();
     $('.icon').click(function() {
       $('.video').toggle();
       return false; 
@@ -122,7 +121,7 @@
         }
       },
       function() {
-        if (($window).width() > 640) {
+        if ($(window).width() > 640) {
           $("#description-" + this.id).hide();
           $(this).css("background-color", "rgba(191, 191, 191, 0.5)");
         }
