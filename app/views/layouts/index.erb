@@ -48,7 +48,7 @@
     <div class="other-videos">
       <h3>More Interviews</h3>
       <a href="/<%= @video.id %>">
-        <div class="individual-videos" style="background-image: url('<%= @video.thumb.picture %>');">
+        <div class="individual-videos" style="background-image: url('<%= @video.picture.thumb %>');">
           <div class="individual-filter" id="<%= @video.id %>" >
             <h2 id="description-<%= @video.id %>"><%= @video.description %></h2>
             <h4><%= @video.title %></h4>
@@ -57,7 +57,7 @@
       </a>
     <% @videos.each do |video| %>
         <a href="/<%= video.id %>">
-          <div class="individual-videos" style="background-image: url('<%= video.thumb.picture %>');">
+          <div class="individual-videos" style="background-image: url('<%= video.picture.thumb %>');">
             <div class="individual-filter" id="<%= video.id %>" >
               <h2 id="description-<%= video.id %>"><%= video.description %></h2>
               <h4><%= video.title %></h4>
