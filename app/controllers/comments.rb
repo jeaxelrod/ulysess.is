@@ -7,11 +7,11 @@ Ulysess::App.controllers :comments do
       redirect to "/#{@comment.video_id}"
     else
       @video = Video.find(@comment.video_id)
-      @videos = Video.all
+      @videos = Video.where.not(id: @video.id).reverse_order
       @title = @video.title
       @vimeo_video_id = @video.link[/\d+/]
       @comments = @video.comments
-     render "layouts/index.erb"
+      render "layouts/index.erb"
     end
   end
 
