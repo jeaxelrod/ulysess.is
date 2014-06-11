@@ -266,11 +266,14 @@ body {
       text-align: right; }
 
 @media only screen and (max-width: 640px) {
-  .img-background {
-    min-height: 80vh; }
+  body .img-background {
+    height: 80vh; }
 
-  .title {
+  body .img-filter {
+    height: 80vh; }
+
+  body .title {
     margin-bottom: 0; }
 
   body .content a.icon {
-    margin-top: 160px; } }
+    margin-top: 320px; } }
